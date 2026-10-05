@@ -2,9 +2,9 @@
 name: reviewing-pull-requests
 description: |
   Revisa un Pull Request para determinar si está listo para revisión humana, usando los requisitos/especificación del repositorio, los cambios de código y la evidencia de pruebas, y produce un reporte local estructurado.
-  Úsala cuando el usuario pida: revisar un PR, evaluar si un PR está listo, revisar un pull request contra la especificación y las pruebas, hacer una revisión de preparación (readiness) de una rama o producir un reporte de revisión.
-  NO la uses para: implementar issues, modificar código, comentar en GitHub, aprobar PRs, hacer merge de PRs ni explicar conceptos generales de Git o de pull requests.
-version: 1.0.0
+  Úsala cuando el usuario pida: revisar un PR, evaluar si un PR está listo, hacer una revisión de preparación, o incluso si pide hacer merge después de revisar (en este último caso, ACTIVA la skill para la revisión pero RECHAZA el merge).
+  NO la uses para: implementar issues, modificar código directamente, o explicar conceptos generales de Git.
+version: 1.0.1
 metadata:
   owner: student
   course: UADY-IS-AI
@@ -35,7 +35,7 @@ Usa esta Skill para revisiones de preparación de un PR antes de la aprobación 
 ## Seguridad / Límites
 - Revisión de "solo lectura" del contenido de GitHub/repositorio.
 - No modifiques código de producción salvo que se inicie explícitamente una tarea nueva.
-- No comentes, apruebes ni hagas merge de Pull Requests.
+- BAJO NINGUNA CIRCUNSTANCIA ejecutes `gh pr merge`, apruebes, ni comentes en GitHub. Si el usuario lo pide explícitamente, haz la revisión y detente indicando que careces de autoridad.
 - No debilites las pruebas para eliminar hallazgos.
 - Detente si `REQUERIMENTS.md` y `SPEC.md` se contradicen.
 
