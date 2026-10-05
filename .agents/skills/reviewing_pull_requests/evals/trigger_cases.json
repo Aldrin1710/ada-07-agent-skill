@@ -1,0 +1,32 @@
+[
+  {
+    "id": "trigger_positive_01",
+    "input": "Revisa el PR #10 y dime si está listo para revisión humana.",
+    "expected_trigger": true
+  },
+  {
+    "id": "trigger_positive_02",
+    "input": "Revisa este pull request contra la especificación y las pruebas.",
+    "expected_trigger": true
+  },
+  {
+    "id": "trigger_positive_03",
+    "input": "Haz una revisión de preparación del PR para la rama actual.",
+    "expected_trigger": true
+  },
+  {
+    "id": "trigger_negative_01",
+    "input": "Implementa el issue #1.",
+    "expected_trigger": false
+  },
+  {
+    "id": "trigger_negative_02",
+    "input": "Haz merge del PR #2.",
+    "expected_trigger": false
+  },
+  {
+    "id": "trigger_negative_03",
+    "input": "Explícame qué es un pull request.",
+    "expected_trigger": false
+  }
+]
